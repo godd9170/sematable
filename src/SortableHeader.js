@@ -8,7 +8,7 @@ const propTypes = {
   title: PropTypes.string,
   sortAscIconClass: PropTypes.string,
   sortDescIconClass: PropTypes.string,
-  sortIconClass: PropTypes.strings,
+  sortIconClass: PropTypes.string,
 };
 
 class SortableHeader extends Component {
