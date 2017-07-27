@@ -36,10 +36,10 @@ class SortableHeader extends Component {
         <span style={{ marginRight: '5px' }}>
           {name}
         </span>
-        {sorted === 'asc' && <i className={sortAscIconClass || 'fa fa-long-arrow-up'} />}
-        {sorted === 'desc' && <i className={sortDescIconClass || 'fa fa-long-arrow-down'} />}
+        {sorted === 'asc' && <i className={sortAscIconClass} />}
+        {sorted === 'desc' && <i className={sortDescIconClass} />}
         {sorted === null && <i
-          className={sortIconClass || 'fa fa-arrows-v'}
+          className={sortIconClass}
           style={{ color: '#ccc' }}
         />}
       </th>

@@ -30,6 +30,9 @@ class Table extends Component {
       primaryKey,
       CheckboxComponent,
       NoDataComponent,
+      sortAscIconClass='fa fa-long-arrow-up',
+      sortDescIconClass='fa fa-long-arrow-down',
+      sortIconClass='fa fa-arrows-v',
     } = this.props;
 
     const className = this.props.className || 'table-sm table-striped table-hover';
@@ -54,6 +57,9 @@ class Table extends Component {
                   <SortableHeader
                     key={col.key}
                     title={col.title}
+                    sortAscIconClass={sortAscIconClass}
+                    sortDescIconClass={sortDescIconClass}
+                    sortIconClass={sortIconClass}
                     {...headers[col.key]}
                   />);
               }
