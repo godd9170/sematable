@@ -173,13 +173,13 @@ const sematable = (tableName, TableComponent, columns, configs = {}) => {
       const columnMap = _.keyBy(columns, 'key');
       const hasFilterable = _.some(columns, 'filterable');
       const columnHeaders = _.mapValues(columnMap, (value, key) => ({
-        sorted: key === sortInfo.sortKey ? sortInfo.direction : null,
+        sorted: value.sorted ? value.sorted : (key === sortInfo.sortKey ? sortInfo.direction : null),
         sortKey: key,
         primaryKey: value.primaryKey,
         name: value.header,
         sortable: value.sortable,
         title: value.title,
-        handleClick: (!!value.handleClick ? value.handleClick : (k) => onHeaderClick(k)),
+        handleClick: (value.handleClick ? value.handleClick : (k) => onHeaderClick(k)),
       }));
 
       const headers = {

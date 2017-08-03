@@ -53,7 +53,6 @@ class Table extends Component {
             }
             {visibleColumns.map((col) => {
               if (col.sortable && !col.hidden) {
-                console.log('HEADERS: ', headers);
                 return (
                   <SortableHeader
                     key={col.key}
