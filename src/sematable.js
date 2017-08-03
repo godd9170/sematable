@@ -179,7 +179,7 @@ const sematable = (tableName, TableComponent, columns, configs = {}) => {
         name: value.header,
         sortable: value.sortable,
         title: value.title,
-        handleClick: (k) => onHeaderClick(k),
+        handleClick: (!!value.handleClick ? value.handleClick : (k) => onHeaderClick(k)),
       }));
 
       const headers = {
